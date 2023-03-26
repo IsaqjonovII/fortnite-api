@@ -1,18 +1,17 @@
 .sidebar {
-    width: 100%;
-    max-width: 1200px;
+    width: 90%;
     height: 320px;
     position: absolute;
     top: 51px;
     right: 0;
     background-color: var(--gray100);
-    padding: 0 20px;
     font-family: var(--font-opens);
 }
 
 .sidebar__links {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .sidebar__link {
@@ -20,15 +19,29 @@
     height: 64px;
     color: var(--grayccc);
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
+    cursor: pointer;
+    list-style-type: none;
+    padding: 0 10px;
+    box-shadow: 0 0px 1px var(--gray500);
 }
 
 .more__link {
-    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: 250ms all;
+    background-color: var(--gray300);
 }
 
 .dropdown__wrapper {
     width: 100%;
+    padding: 0 10px;
 }
 
 .more__icon {
@@ -36,4 +49,40 @@
     height: 30px;
     margin-left: auto;
     color: var(--yellow100);
+}
+
+.moved {
+    transform: scaleX(1);
+    left: 0;
+    right: 0;
+    opacity: 1;
+    transition: opacity 250ms all;
+}
+
+.back__wrapper {
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    background-color: var(--gray100);
+    justify-content: start;
+}
+
+.more__link>li {
+    width: 100%;
+    max-width: 50%;
+    margin: 10px 0;
+    transition: 250ms ease;
+    padding: 0 60px;
+    font-size: 12px;
+}
+
+.more__link>li:hover {
+    color: var(--yellow100);
+}
+
+.back__wrapper>.back__icon {
+    transform: rotateY(180deg);
+    margin-right: 20px;
+    color: var(--yellow100);
+    font-size: 20px;
 }
