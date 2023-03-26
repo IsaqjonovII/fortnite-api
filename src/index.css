@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  --txt-gray: #ccc;
+  --bg-light-black: #2a2a2a;
+  --main-txt-size: 16px;
+  --white: #fff;
+  --black: #000;
+  --gray100: #1f1f1f;
+  --gray200: #1A1D1E;
+  --gray300: #2a2a2a;
+  --gray400: #26292B;
+  --gray500: #2B2F31;
+  --gray600: #313538;
+  --gray700: #3A3F42;
+  --gray800: #4C5155;
+  --gray900: #697177;
+  --grayccc: #cccccc;
+  --gray1100: #9BA1A6;
+  --gray1200: #ECEDEE;
+  --slate2: #F8F9FA;
+  --slate3: #F1F3F5;
+  --red100: #730301;
+  --red200: #DF242F;
+  --red300: #FF7366;
+  --pink100: #E61777;
+  --pink200: #EC27FF;
+  --purple100: #2D2039;
+  --purple200: #4C197B;
+  --purple300: #762DD3;
+  --purple400: #CE59FF;
+  --blue2: #CEF3FF;
+  --blue4: #58DCFF;
+  --blue6: #06B7F1;
+  --blue8: #0B85EC;
+  --blue100: #031238;
+  --blue200: #082260;
+  --blue300: #0840A7;
+  --blue400: #0055FE;
+  --blue500: #0EA4EB;
+  --blue600: #33DAFF;
+  --blue700: #CCFFFF;
+  --mint100: #006B45;
+  --mint200: #36FF82;
+  --green100: #023302;
+  --green200: #024F03;
+  --green300: #008005;
+  --green400: #61BF00;
+  --green500: #A1FE00;
+  --yellow100: #F7FF19;
+  --yellow200: #FDEF6A;
+  --orange100: #381D18;
+  --orange200: #8A3C1E;
+  --orange300: #BF4F00;
+  --orange400: #EB7100;
+  --orange500: #FF8B19;
+  --font-opens: 'Open Sans', sans-serif, arial;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+a {
+  all: inherit;
+}

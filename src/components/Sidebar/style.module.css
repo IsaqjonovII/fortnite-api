@@ -1,0 +1,39 @@
+.sidebar {
+    width: 100%;
+    max-width: 1200px;
+    height: 320px;
+    position: absolute;
+    top: 51px;
+    right: 0;
+    background-color: var(--gray100);
+    padding: 0 20px;
+    font-family: var(--font-opens);
+}
+
+.sidebar__links {
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar__link {
+    width: 100%;
+    height: 64px;
+    color: var(--grayccc);
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.more__link {
+    display: none;
+}
+
+.dropdown__wrapper {
+    width: 100%;
+}
+
+.more__icon {
+    width: 30px;
+    height: 30px;
+    margin-left: auto;
+    color: var(--yellow100);
+}

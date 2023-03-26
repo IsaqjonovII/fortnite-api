@@ -1,0 +1,252 @@
+.navbar {
+    width: 100%;
+    height: 51px;
+    background-color: var(--gray500);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    font-family: var(--font-opens);
+}
+
+.navbar__container {
+    max-width: 1550px;
+    width: 100%;
+    height: 100%;
+}
+
+.nav__logo {
+    width: 100%;
+    max-width: 186px;
+}
+
+.epicGames__logo {
+    width: 100%;
+    max-width: 50px;
+    object-fit: cover;
+    padding: 8px;
+}
+
+.fort__logo {
+    width: 100%;
+    max-width: 130px;
+    object-fit: cover;
+}
+
+.nav__links {
+    max-width: 710px;
+    height: 100%;
+}
+
+.nav__link__wrp {
+    width: auto;
+    height: 100%;
+    padding: 0 16px;
+    margin: 0 5px;
+    position: relative;
+}
+
+.nav__link,
+.dropdown__title {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--grayccc);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+.nav__link__wrp::after,
+.nav__link__active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: 180ms ease;
+    background-color: var(--yellow100);
+}
+
+.nav__link__active::after {
+    transform: scaleY(1);
+}
+
+.nav__link__wrp:not(.nav__link__wrp:last-child):hover:after {
+    transform: scaleY(1);
+}
+
+.dropdown__wrp {
+    width: 140px;
+    height: 210px;
+    background-color: var(--gray400);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.dropdown__wrp>li,
+.lang__dropdown>li {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--grayccc);
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.nav__link:hover,
+.dropdown__wrp>li:hover,
+.dropdown__title:hover,
+.lang__dropdown>li:hover {
+    color: #fff;
+}
+
+.nav__link__wrp:last-child:hover .dropdown__wrp {
+    transform: scaleY(1);
+}
+
+.left__nav {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+}
+
+.right__nav {
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+    color: var(--grayccc);
+}
+
+.search__input__wrapper {
+    width: 100%;
+    max-width: 350px;
+    height: 80%;
+    padding: 0 8px;
+    background-color: var(--gray100);
+    border-radius: 6px;
+    border: 1px solid var(--gray600);
+}
+
+.search__input {
+    flex: 1;
+    height: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--grayccc);
+}
+
+.search__input::placeholder {
+    color: var(--gray900);
+    font-size: 16px;
+}
+
+.cancel__icon,
+.search__icon,
+.lang__icon {
+    cursor: pointer;
+}
+
+.search__icon,
+.lang__icon {
+    width: 45px;
+    height: 100%;
+    font-size: 18px;
+    padding: 13px;
+}
+
+.language__wrapper {
+    width: 45px;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+
+.lang__dropdown {
+    width: 200px;
+    height: 390px;
+    position: absolute;
+    top: 100%;
+    background-color: var(--gray500);
+    transform: scaleY(0);
+}
+
+.language__wrapper:hover .lang__dropdown {
+    transform: scaleY(1);
+}
+
+.lang__dropdown>li {
+    height: 31px;
+    text-align: center;
+    justify-content: center;
+}
+
+.signIn__btn {
+    width: 100px;
+    height: 100%;
+    color: var(--grayccc);
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.signIn__btn>span {
+    font-size: 11px;
+}
+
+.download__btn {
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 11px;
+    text-transform: uppercase;
+    background-color: var(--yellow100);
+}
+
+.bars__icon {
+    display: none;
+    
+}
+
+@media screen and (max-width: 1250px) {
+    .nav__links {
+        display: none;
+    }
+
+    .left__nav {
+        justify-content: start;
+    }
+
+    .signIn__btn {
+        min-width: 80px;
+    }
+
+    .bars__icon {
+        display: block;
+        width: 50px;
+        height: 100%;
+        padding: 15px;
+        color: var(--grayccc);
+        cursor: pointer;
+    }
+}
