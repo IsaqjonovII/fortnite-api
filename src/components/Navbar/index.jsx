@@ -35,6 +35,7 @@ const Navbar = ({ isSidebarOpened, setIsSidebarOpened }) => {
               <img className={c.fort__logo} src={fortniteLogo} alt="" />
             </Link>
           </div>
+          <button className={c.play__btn}>play now</button>
           {isSidebarOpened ? (
             <BsXLg
               className={c.bars__icon}

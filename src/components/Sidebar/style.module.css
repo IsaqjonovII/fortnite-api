@@ -86,3 +86,9 @@
     color: var(--yellow100);
     font-size: 20px;
 }
+
+@media screen and (max-width: 620px) {
+    .sidebar {
+        width: 100%;
+    }
+}
