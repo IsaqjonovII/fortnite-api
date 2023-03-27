@@ -4,6 +4,7 @@
     position: absolute;
     top: 51px;
     right: 0;
+    z-index: 999;
     background-color: var(--gray100);
     font-family: var(--font-opens);
 }
