@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from "react";
+import c from "./style.module.css";
+import Slider from "../../components/Slider";
 
 const Home = () => {
+  
   return (
-    <div>
-      hi
+    <div className={c.home__page}>
+      <Slider />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

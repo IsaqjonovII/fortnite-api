@@ -21,7 +21,9 @@ function App() {
       {isSidebarOpened && <Sidebar />}
       <Switch>
         {routes.map(({ id, link, component }) => (
-          <Route key={id} exact path={link} component={component} />
+          <Route key={id} exact path={link}>
+            {component}
+          </Route>
         ))}
       </Switch>
       <Footer />

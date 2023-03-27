@@ -7,11 +7,6 @@ export const routes = [
     link: "/",
     component: Home,
   },
-  {
-    id: 1,
-    link: "/profile",
-    component: Profile,
-  },
 ];
 
 export const Nav_Routes = [
