@@ -54,8 +54,11 @@ const Navbar = ({ isSidebarOpened, setIsSidebarOpened }) => {
                   <div className={c.nav__link__wrp} key={id}>
                     <NavLink
                       to={link ?? "/"}
-                      className={c.nav__link}
-                      activeClassName={c.nav__link__active}
+                      className={({ isActive }) =>
+                        isActive
+                          ? `${c.nav__link__active} ${c.nav__link}`
+                          : c.nav__link
+                      }
                     >
                       {title}
                     </NavLink>

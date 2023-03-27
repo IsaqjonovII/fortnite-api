@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { Route, Switch } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import { routes } from "./routes/index";
 import Sidebar from "./components/Sidebar";
+import Home from "./routes/Home";
+import { Routes, Route } from "react-router-dom";
+import VBucks from "./routes/Vbucks";
 
 function App() {
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
@@ -19,16 +20,14 @@ function App() {
         setIsSidebarOpened={setIsSidebarOpened}
       />
       {isSidebarOpened && <Sidebar />}
-      <Switch>
-        {routes.map(({ id, link, component }) => (
-          <Route key={id} exact path={link}>
-            {component}
-          </Route>
-        ))}
-      </Switch>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/vbucks" element={<VBucks />} />
+
+      </Routes>
       <Footer />
     </div>
   );
-}
+} 
 
 export default App;

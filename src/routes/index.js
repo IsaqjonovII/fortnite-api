@@ -1,5 +1,5 @@
 import Home from "./Home";
-import Profile from "./Profile";
+import VBucks from "./Vbucks";
 
 export const routes = [
   {
@@ -7,6 +7,11 @@ export const routes = [
     link: "/",
     component: Home,
   },
+  {
+    id: 1,
+    link: "/vbucks",
+    component: VBucks,
+  }
 ];
 
 export const Nav_Routes = [
