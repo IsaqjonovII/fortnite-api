@@ -5,6 +5,12 @@ import c from "./style.module.css";
 
 const BattlePass = () => {
   const [data, setData] = useState([]);
+  const [randomImg, setRandomImg] = useState(0);
+  const [currentImg, setCurrentImg] = useState("");
+
+  useEffect(() => {
+    setRandomImg(Math.floor(Math.random() * 100));
+  }, []);
 
   const axiosInstance = useMemo(
     () =>
@@ -28,8 +34,6 @@ const BattlePass = () => {
     };
     fetchData();
   }, []);
-
-  console.log(data);
 
   return (
     <div className={c.battle__pass}>
@@ -61,6 +65,36 @@ const BattlePass = () => {
             <h2>
               PLUS MORE NEW OUTFITS, INCLUDING EREN JAEGER LATER IN THE SEASON!
             </h2>
+          </div>
+
+          <div className={c.main__img}>
+            <img
+              src={
+                data.length
+                  ? currentImg
+                    ? currentImg
+                    : data.slice(0 + randomImg, 8 + randomImg)[0].images
+                        .featured
+                  : null
+              }
+              alt=""
+            />
+          </div>
+
+          <div className={`${c.randomImgs__wrapper} flex`}>
+            {data.slice(0 + randomImg, 8 + randomImg).map(({ images }, inx) => (
+              <div
+                key={inx}
+                className={
+                  currentImg === images.featured
+                    ? `${c.random__img} ${c.random__img__active}`
+                    : c.random__img
+                }
+                onClick={() => setCurrentImg(images.featured)}
+              >
+                <img src={images.icon} alt="" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
