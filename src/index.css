@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 :root {
   --txt-gray: #ccc;
   --bg-black: #202425;
@@ -54,6 +54,7 @@
   --orange300: #BF4F00;
   --orange400: #EB7100;
   --orange500: #FF8B19;
+  --font-c: 'Luckiest Guy', cursive;
   --font-opens: 'Open Sans', sans-serif, arial;
 }
 
@@ -76,4 +77,8 @@ body {
 
 a {
   all: inherit;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

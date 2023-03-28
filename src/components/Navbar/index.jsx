@@ -69,10 +69,10 @@ const Navbar = ({ isSidebarOpened, setIsSidebarOpened }) => {
                 <p className={c.dropdown__title}>more </p>
                 <div className={c.dropdown__wrp}>
                   {[
-                    "battle pass",
-                    "crew",
+                    "my library",
+                    "create",
                     "competetive",
-                    "v-bucks",
+                    "news",
                     "help",
                   ].map((li__item) => (
                     <li key={li__item}>{li__item}</li>

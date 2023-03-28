@@ -1,19 +1,3 @@
-import Home from "./Home";
-import VBucks from "./Vbucks";
-
-export const routes = [
-  {
-    id: 0,
-    link: "/",
-    component: Home,
-  },
-  {
-    id: 1,
-    link: "/vbucks",
-    component: VBucks,
-  }
-];
-
 export const Nav_Routes = [
   {
     id: 0,
@@ -22,13 +6,13 @@ export const Nav_Routes = [
   },
   {
     id: 1,
-    title: "my library",
-    link: "/my-library",
+    title: "battle pass",
+    link: "/battle-pass",
   },
   {
     id: 2,
-    title: "create",
-    link: "/create",
+    title: "crew",
+    link: "/crew",
   },
   {
     id: 3,
