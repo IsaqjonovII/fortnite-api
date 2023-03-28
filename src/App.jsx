@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { Routes, Route } from "react-router-dom";
 import VBucks from "./pages/Vbucks";
 import BattlePass from "./pages/BattlePass";
+import Crew from "./pages/Crew";
 
 function App() {
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
@@ -23,9 +24,9 @@ function App() {
       {isSidebarOpened && <Sidebar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/vbucks" element={<VBucks />} />
+        <Route path="/crew" element={<VBucks />} />
         <Route path="/battle-pass" element={<BattlePass />} />
-
+        <Route path="/vbucks" element={<Crew />} />
       </Routes>
       <Footer />
     </div>
