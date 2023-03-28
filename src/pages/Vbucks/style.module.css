@@ -1,0 +1,98 @@
+.vbucks {
+    width: 100%;
+    height: 100vh;
+    background-image: url("https://cdn2.unrealengine.com/fn-subs-web-riftknightkieran-desktop-1920x1080-a3924df21aca.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    position: relative;
+    padding: 40px;
+}
+
+.subs__right, .subs__left {
+    width: 100%;
+    max-width: 550px;
+    height: 100%;
+    max-height: 470px;
+    font-family: var(--font-c);
+    text-align: center;
+    color: #fff;
+}
+
+.crew__logo {
+    width: 100%;
+    height: 40%;
+    object-fit: contain;
+}
+
+.subs__right > h2 {
+    font-size: 30px;
+    margin: 0px 0 10px;
+    text-shadow: 0px 0px 3px #6b6b6b;
+}
+
+.subs__right > p {
+    font-size: 17px;
+    max-width: 350px;
+    text-shadow: 0px 0px 3px #6b6b6b;
+    margin: auto;
+}
+
+.subs__btn__wrapper {
+    width: 100%;
+    max-width: 160px;
+    height: 40px;
+    position: relative;
+    margin: 20px auto;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.cta_background {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+}
+
+.cta_background_right {
+    right: -20px;
+}
+
+.cta_background_left {
+    left: -20px;
+    z-index: 1;
+}
+
+.subs__btn {
+    width: 100%;
+    height: 100%;
+    background-color: var(--yellow100);
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    color: var(--gray100);
+    font-family: var(--font-c);
+}
+
+@media screen and (max-width: 1400px){
+    .vbucks {
+        height: 70vh;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .subs__left {
+        display: none;
+    }
+    .crew__logo {
+        width: 80%;
+        height: 120px;
+    }
+    .subs__right > h2 {
+        font-size: 24px;
+    }
+    .subs__right > p {
+        font-size: 14px;
+    }
+}
