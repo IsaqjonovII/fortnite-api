@@ -22,11 +22,13 @@ function App() {
 
   return (
     <div className="app">
-      <Navbar
-        isSidebarOpened={isSidebarOpened}
-        setIsSidebarOpened={setIsSidebarOpened}
-      />
-      {isSidebarOpened && <Sidebar />}
+      <div className="side__nav">
+        <Navbar
+          isSidebarOpened={isSidebarOpened}
+          setIsSidebarOpened={setIsSidebarOpened}
+        />
+        {isSidebarOpened && <Sidebar />}
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/crew" element={<VBucks />} />
