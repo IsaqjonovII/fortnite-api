@@ -95,11 +95,19 @@
     .categories__wrapper {
         padding: 0 20px;
     }
+
+    .categories {
+        padding: 10px;
+    }
 }
 
 @media screen and (max-width:768px){
     .category {
         font-size: 11px;
         margin: 6px 4px;
+    }
+
+    .categories {
+        padding: 10px 0;
     }
 }

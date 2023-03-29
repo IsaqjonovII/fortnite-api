@@ -1,4 +1,9 @@
-.bucks_container {
+.bucks {
+  width: 100%;
+  height: auto;
+}
+
+.bucks__container {
   width: 100%;
   height: 100%;
   min-height: 90vh;
@@ -6,36 +11,36 @@
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
 
-.bucks_img {
+.bucks__img {
   width: 100%;
-  max-width: 627px;
+  max-width: 400px;
   height: 480px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.bucks_img img {
+.bucks__img img {
   width: 100%;
   height: 100%;
-  filter: drop-shadow(0px, 0px, 2px #000);
   object-fit: contain;
 }
 
-.container_redeem {
-  width: 688px;
+.container__redeem {
+  width: 100%;
+  max-width: 700px;
   height: 522px;
   display: flex;
   padding: 10px 15px;
+  margin-left: 50px;
   flex-direction: column;
 }
 
-.container_redeem h1 {
+.container__redeem h1 {
   font-size: 64px;
   font-weight: 400;
   width: 80%;
@@ -46,24 +51,25 @@
   margin: 0px 0px 10px 0px;
 }
 
-.container_redeem h3 {
+.container__redeem h3 {
   font-size: 30px;
   font-family: var(--font-c);
   color: #ffff00;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px;
   font-weight: 300;
 }
 
-.container_redeem p {
+.container__redeem p {
   font-size: 1rem;
-  margin: 10px 0px 10px 0px;
+  margin: 10px 0px;
   color: #333333;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
 
-.container_redeem button {
-  width: 240px;
+.redeem__btn {
+  width: 100%;
+  max-width: 240px;
   height: 60px;
   color: #333333;
   font-size: 1.25rem;
@@ -74,7 +80,54 @@
   cursor: pointer;
 }
 
-.container_redeem button:active {
+.container__redeem button:active {
   transform: scale(0.9);
   transition: 100ms;
+}
+
+@media screen and (max-width: 1024px) {
+  .container__redeem > h1 {
+    font-size: 55px;
+  }
+  .container__redeem > h3 {
+    font-size: 23px;
+  }
+  .container__redeem > p {
+    margin: 0 0 20px 0;
+  }
+
+  .container__redeem {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .bucks__img {
+    max-width: 300px;
+    height: 350px;
+  }
+
+  .container__redeem {
+    height: auto;
+  }
+  .container__redeem > h1,
+  .container__redeem > h3,
+  .container__redeem > p {
+    width: 100%;
+  }
+
+  .container__redeem > h1 {
+    font-size: 40px;
+  }
+  .container__redeem > h3 {
+    font-size: 20px;
+  }
+
+  .redeem__btn {
+    max-width: 180px;
+    height: 45px;
+  }
+  .bucks__container {
+    flex-direction: column;
+  }
 }
