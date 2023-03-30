@@ -2,7 +2,7 @@ export const Nav_Routes = [
   {
     id: 0,
     title: "Discover",
-    link: "/"
+    link: "/",
   },
   {
     id: 1,
@@ -18,5 +18,10 @@ export const Nav_Routes = [
     id: 3,
     title: "v-bucks",
     link: "/vbucks",
+  },
+  {
+    id: 4,
+    title: "my library",
+    link: "/my-library",
   },
 ];

@@ -104,3 +104,47 @@
 .date__label:hover {
   color: var(--blue400);
 }
+
+@media screen and (max-width: 1280px) {
+  .cards__wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card__img {
+    max-height: 200px;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  .cards__wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    grid-gap: 10px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .card__img {
+    max-height: 160px;
+  }
+  .description,
+  .details {
+    font-size: 12px;
+    margin: 5px 0;
+  }
+
+  .legendary__label,
+  .epic__label {
+    max-width: 100px;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .cards__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card__img {
+    max-height: 130px;
+  }
+}
