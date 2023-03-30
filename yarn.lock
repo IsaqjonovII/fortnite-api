@@ -647,11 +647,6 @@ node-releases@^2.0.8:
   resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.10.tgz#c311ebae3b6a148c89b1813fd7c4d3c024ef537f"
   integrity sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==
 
-pagination-react-js@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/pagination-react-js/-/pagination-react-js-1.0.1.tgz#c27d9a059055fe74e3a0ef2021eae3220f2ae0bc"
-  integrity sha512-PZg9eqrkS91jYaqLu5NynL/R6A2pyIH2sCwEGppldMBnuLaauS+eTJvW6evdBC3HaGBepM6nYRocKY1CULTAsA==
-
 path-parse@^1.0.7:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
