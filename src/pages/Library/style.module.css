@@ -1,0 +1,106 @@
+.library {
+  width: 100%;
+  height: auto;
+  color: var(--grayccc);
+  font-family: var(--font-opens);
+}
+
+.cards__wrapper {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  padding: 30px 50px;
+}
+
+.loadmore__btn {
+  width: 100%;
+  max-width: 250px;
+  border: none;
+  height: 50px;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 40px auto;
+  display: block;
+  font-family: var(--font-c);
+  background-color: var(--yellow100);
+}
+.card {
+  border-radius: 16px;
+  padding: 0 0 20px 0;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.17);
+  backdrop-filter: blur(22px);
+  border: 1px solid transparent;
+  transition: 250ms ease-in-out;
+}
+
+.card:hover {
+  border: 1px solid var(--gray700);
+  box-shadow: 0px 2px 45px var(--gray700);
+}
+
+.card__img,
+.card__img > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 16px 16px 0 0;
+}
+
+.card__img {
+  width: 100%;
+  max-height: 250px;
+}
+
+.description,
+.details {
+  width: 100%;
+  padding: 0 15px;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 10px 0;
+}
+
+.description {
+  min-height: 40px;
+}
+
+.epic__label,
+.legendary__label {
+  width: 100%;
+  max-width: 120px;
+  margin: 10px 0;
+  display: inline-block;
+  text-align: center;
+  padding: 5px 0;
+  border: 2px solid var(--blue300);
+  border-radius: 6px;
+  user-select: none;
+}
+
+.epic__label:active,
+.legendary__label:active {
+  transform: scale(0.95);
+}
+
+.epic__label {
+  border: 2px solid var(--pink200);
+}
+.epic__label:hover {
+  background-color: var(--pink200);
+  color: var(--white);
+  box-shadow: 0px 2px 40px var(--pink200);
+}
+
+.legendary__label:hover {
+  background-color: var(--blue300);
+  color: var(--white);
+  box-shadow: 0px 2px 40px var(--blue300);
+}
+
+.date__label:hover {
+  color: var(--blue400);
+}

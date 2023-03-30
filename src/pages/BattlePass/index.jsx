@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { IoMdPlay } from "react-icons/io";
 import axios from "axios";
 import c from "./style.module.css";
+import Loader from "../../components/Loader";
 
 const BattlePass = () => {
   const [data, setData] = useState([]);
@@ -12,21 +13,18 @@ const BattlePass = () => {
     setRandomImg(Math.floor(Math.random() * 100));
   }, []);
 
-  const axiosInstance = useMemo(
-    () =>
-      axios.create({
-        baseURL: "https://fortniteapi.io/v2",
-        headers: {
-          Authorization: "0c13c2aa-0a2cec03-b5455c56-766ae857",
-        },
-      }),
-    []
-  );
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await axiosInstance.get("/items/list?lang=en");
+        const res = await axios.get(
+          "https://fortniteapi.io/v2/items/list?lang=en",
+          {
+            headers: {
+              Authorization: "0c13c2aa-0a2cec03-b5455c56-766ae857",
+            },
+          }
+        );
         setData(res.data.items);
       } catch (error) {
         console.log(error);
@@ -34,6 +32,7 @@ const BattlePass = () => {
     };
     fetchData();
   }, []);
+  
 
   return (
     <div className={c.battle__pass}>
@@ -82,6 +81,7 @@ const BattlePass = () => {
           </div>
 
           <div className={`${c.randomImgs__wrapper} flex`}>
+            {data.length ? null : <Loader />}
             {data.slice(0 + randomImg, 8 + randomImg).map(({ images }, inx) => (
               <div
                 key={inx}

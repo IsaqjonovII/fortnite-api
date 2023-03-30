@@ -22,6 +22,28 @@ const Navbar = ({ isSidebarOpened, setIsSidebarOpened }) => {
     "O'ZBEKCHA",
     "TÜRKÇE",
   ];
+  const dropdownRoutes = [
+    {
+      title: "my library",
+      link: "/my-library",
+    },
+    {
+      title: "create",
+      link: "/",
+    },
+    {
+      title: "competetive",
+      link: "/",
+    },
+    {
+      title: "news",
+      link: "/",
+    },
+    {
+      title: "help",
+      link: "/",
+    },
+  ];
 
   return (
     <nav className={`${c.navbar} flex`}>
@@ -68,14 +90,10 @@ const Navbar = ({ isSidebarOpened, setIsSidebarOpened }) => {
               <div className={c.nav__link__wrp}>
                 <p className={c.dropdown__title}>more </p>
                 <div className={c.dropdown__wrp}>
-                  {[
-                    "my library",
-                    "create",
-                    "competetive",
-                    "news",
-                    "help",
-                  ].map((li__item) => (
-                    <li key={li__item}>{li__item}</li>
+                  {dropdownRoutes.map(({ title, link }, inx) => (
+                    <Link to={link} key={inx} className={c.dropdown__link}>
+                      <li>{title}</li>
+                    </Link>
                   ))}
                 </div>
               </div>

@@ -7,6 +7,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import VBucks from "./pages/Vbucks";
 import BattlePass from "./pages/BattlePass";
 import Crew from "./pages/Crew";
+import MyLibrary from "./pages/Library";
 
 function App() {
   const [isSidebarOpened, setIsSidebarOpened] = useState(false);
@@ -14,6 +15,7 @@ function App() {
 
   useEffect(() => {
     setIsSidebarOpened(false);
+    window.scrollTo(0, 0);
   }, [pathname]);
 
   isSidebarOpened
@@ -34,6 +36,7 @@ function App() {
         <Route path="/crew" element={<VBucks />} />
         <Route path="/battle-pass" element={<BattlePass />} />
         <Route path="/vbucks" element={<Crew />} />
+        <Route path="/my-library" element={<MyLibrary />} />
       </Routes>
       <Footer />
     </div>
